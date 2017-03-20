@@ -4,7 +4,7 @@ These are my personal nodes for using Google Go.
 
 ## Sorting
 
-```
+```go
 import "sort"
 
 type Matrix [][2]int
