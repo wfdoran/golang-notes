@@ -2,6 +2,15 @@
 
 These are my personal nodes for using Google Go. 
 
+## input 
+
+### read an int from stdin
+
+```go
+var i int
+fmt.Scan(&i)
+```
+
 ## maps
 
 ```go
