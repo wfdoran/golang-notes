@@ -37,6 +37,36 @@ maps are not write thread safe.  Use a goroutine with input channel.
 
 With for loop on range of a map, order will vary!
 
+## arrays
+
+initialize
+
+```go
+a := make([]int, 10)
+a := []int{}
+```
+
+operations
+```go
+a = append(a, v)                    // push
+v, a = a[len(a)-1], a[:len(a)-1]    // pop
+a = append([]int{v}, a)             // prepend
+v, a = a[0], a[1:]                  // head
+
+a = append(a[:i], a[i+1:])          // delete a[i]
+b := make([]int,len(a))
+copy(b,a)                           // copy
+```
+
+2-D arrays
+```go
+temp := make([]int, n * m)
+x := make([][]int, n)
+for i := 0; i < n; i++ {
+    x[i] = temp[i * m : (i+1) * m]
+}
+```
+
 ## Sorting
 
 ```go
