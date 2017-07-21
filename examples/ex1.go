@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "int128"
+import "./int128"
 
 func main() {
     a := int128.Init(10000000)
