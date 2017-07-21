@@ -94,3 +94,15 @@ func main() {
 }
 ```
 
+Here is another example for arrays of int64s. 
+
+```go
+type int64arr []int64
+func (a int64arr) Len() int { return len(a) }
+func (a int64arr) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
+func (a int64arr) Less(i, j int) bool { return a[i] < a[j] }
+
+n := 100
+a := make(int64arr, n)
+sort.Sort(a)
+```
