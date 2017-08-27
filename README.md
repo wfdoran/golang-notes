@@ -11,6 +11,19 @@ var i int
 fmt.Scan(&i)
 ```
 
+## read from a file
+
+```go
+import "os"
+import "bufio"
+
+file, err := os.Open("filename")
+defer file.Close()
+scanner := bufio.NewScanner(file)
+for scanner.Scan() {
+    line := scanner.Text()
+}
+
 ## maps
 
 ```go
