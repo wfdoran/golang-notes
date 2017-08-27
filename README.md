@@ -120,3 +120,19 @@ n := 100
 a := make(int64arr, n)
 sort.Sort(a)
 ```
+
+## string processing
+
+string split
+
+```go
+import "strings"
+a := strings.Split(line, ",")
+```
+
+string to int
+
+```go
+import "strconv"
+val, err := strconv.Atoi(str)
+```
